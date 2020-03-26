@@ -15,7 +15,7 @@ Et de la lancer en utilisant python (3.7)
 $ python api.py
 ```
 ## Routes
-L'API dispose de trois route pour le moment :
+L'API dispose de trois routes pour le moment :
 - GET :
 	- / : Route d'accueil (ne sert à rien pour le moment)
 	 - /example : Permet d'avoir un exemple de ce que peux renvoyer l'API

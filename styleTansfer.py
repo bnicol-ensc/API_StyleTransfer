@@ -1,9 +1,5 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
-try:
-  # %tensorflow_version only exists in Colab.
-  import tensorflow.compat.v2 as tf
-except Exception:
-  pass
+import tensorflow.compat.v2 as tf
 tf.enable_v2_behavior()
 import IPython.display as display
 
@@ -15,8 +11,6 @@ mpl.rcParams['axes.grid'] = False
 import numpy as np
 import time
 import functools
-
-style_path = tf.keras.utils.get_file('style23.jpg','https://storage.googleapis.com/khanhlvg-public.appspot.com/arbitrary-style-transfer/style23.jpg')
 
 style_predict_path = tf.keras.utils.get_file('style_predict.tflite', 'https://storage.googleapis.com/download.tensorflow.org/models/tflite/arbitrary_style_transfer/style_predict_quantized_256.tflite')
 style_transform_path = tf.keras.utils.get_file('style_transform.tflite', 'https://storage.googleapis.com/download.tensorflow.org/models/tflite/arbitrary_style_transfer/style_transfer_quantized_dynamic.tflite')

@@ -25,10 +25,13 @@ def imagesave(image, title):
 
 @app.route('/')
 def hello():
-    return {'hello': 'world'}
+    return {'AppName': 'Style Transfer API',
+            'Author':'Benjamin Nicol',
+            'Version':'v0.1',
+            'Documentation':'https://github.com/bnicol-ensc/API_StyleTransfer'}
 
 @app.route('/example')
-def model():
+def example():
     # Load the input images.
     content_path = tf.keras.utils.get_file('belfry.jpg','https://storage.googleapis.com/khanhlvg-public.appspot.com/arbitrary-style-transfer/belfry-2611573_1280.jpg')
     print(content_path)

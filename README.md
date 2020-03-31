@@ -28,7 +28,7 @@ L'API dispose de trois routes pour le moment :
 	- /example : Permet d'avoir un exemple de ce que peux renvoyer l'API
 
 - POST :
-	- /model/\<modelName\> : A utiliser avec une image dans un attribut **image**, renvoit l'image envoyée avec le style donnée dans le paramètre **\<modelName\>**
+	- /model/**\<modelName\>** : A utiliser avec une image dans un attribut **image**, renvoit l'image envoyée avec le style donnée dans le paramètre **\<modelName\>**
 
 Exemples d'utilisation :
 ```
@@ -49,6 +49,6 @@ L'API est constiuée du dossier racine contenant les fichiers nécessaires au fo
 | Nom du style (\<modelName\>) | Tableau original |
 |--|--|
 | udnie | Udnie, par Francis Picabia![Udnie, Young American Girl by Francis Picabia](https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Francis_Picabia%2C_1913%2C_Udnie_%28Young_American_Girl%2C_The_Dance%29%2C_oil_on_canvas%2C_290_x_300_cm%2C_Mus%C3%A9e_National_d%E2%80%99Art_Moderne%2C_Centre_Georges_Pompidou%2C_Paris..jpg/599px-Francis_Picabia%2C_1913%2C_Udnie_%28Young_American_Girl%2C_The_Dance%29%2C_oil_on_canvas%2C_290_x_300_cm%2C_Mus%C3%A9e_National_d%E2%80%99Art_Moderne%2C_Centre_Georges_Pompidou%2C_Paris..jpg) |
-| scream | Le cri, par Edvard Munch![Le cri, par Edvard Munch](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/260px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg)|
-| sphere | Hand with Reflecting Sphere, par M.C. Escher ![Hand with Reflecting Sphere, par M.C. Escher](https://upload.wikimedia.org/wikipedia/en/6/66/Hand_with_Reflecting_Sphere.jpg)|
+| scream | Le cri, par Edvard Munch<br/>![Le cri, par Edvard Munch](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/260px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg)|
+| sphere | Hand with Reflecting Sphere, par M.C. Escher<br/>![Hand with Reflecting Sphere, par M.C. Escher](https://upload.wikimedia.org/wikipedia/en/6/66/Hand_with_Reflecting_Sphere.jpg)|
 

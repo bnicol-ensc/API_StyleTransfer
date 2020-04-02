@@ -36,7 +36,7 @@ Exemples d'utilisation :
 $ curl -o example.jpg http://localhost:5000/example
 
 # Renvoie le fichier 'lance.jpg' avec le style 'sphere' dans le fichier 'output.jpg'
-$ curl --request POST 'http://127.0.0.1:5000/model/cat' --form 'file=@/home/bnicol/Pictures/lance.jpg' --output 'output.jpg'
+$ curl --request POST 'http://127.0.0.1:5000/model/udnie' --form 'file=@/home/bnicol/Pictures/lance.jpg' --output 'output.jpg'
 ```
 ## Structure de fichiers
 L'API est constiuée du dossier racine contenant les fichiers nécessaires au fonctionnement de celle-ci et de trois sous-dossiers 

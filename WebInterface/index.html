@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Style Transfer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="image-picker/image-picker.css" />
+  </head>
+
+  <body>
+    <h1>Transfert de style embarqué</h1>
+
+    <div class="container">
+      <select class="image-picker" id="chosenStyle">
+        <option
+          data-img-src="./img_styles/udnie.jpg"
+          value="udnie"
+          data-img-class="imgSelector"
+        ></option>
+        <option
+          data-img-src="./img_styles/scream.jpg"
+          value="scream"
+          data-img-class="imgSelector"
+        ></option>
+        <option
+          data-img-src="./img_styles/escher_sphere.jpg"
+          value="sphere"
+          data-img-class="imgSelector"
+          >Cute Kitten 3</option
+        >
+      </select>
+    </div>
+    <input type="file" onchange="readURL(this);" />
+    <img id="imageInput" src="#" alt="" />
+
+    <input id="callAPI" type="button" value="API" onclick="callPostAPI();" />
+    <img id="imageOutput" name="image" src="#" alt="" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="image-picker/image-picker.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+  </body>
+</html>

@@ -43,6 +43,13 @@ img {
   margin-right: auto;
 }
 
+.imgContainerResult {
+  max-width: 650px;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .selectImg {
   margin-bottom: 20px;
 }

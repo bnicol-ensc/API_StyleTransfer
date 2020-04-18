@@ -19,6 +19,8 @@ function callPostAPI() {
   var style = $("#chosenStyle").val();
   console.log(style);
 
+  document.getElementById("imageOutput").src = "./images/spinner.gif";
+
   fetch("http://localhost:5000/model/" + style, {
     method: "POST",
     body: formData,
@@ -35,5 +37,3 @@ function callPostAPI() {
 }
 
 $("select").imagepicker();
-
-console.log($("#chosenStyle").val());

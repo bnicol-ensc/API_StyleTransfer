@@ -3,42 +3,130 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Style Transfer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="image-picker/image-picker.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
-    <h1>Transfert de style embarqué</h1>
-
     <div class="container">
-      <select class="image-picker" id="chosenStyle">
-        <option
-          data-img-src="./img_styles/udnie.jpg"
-          value="udnie"
-          data-img-class="imgSelector"
-        ></option>
-        <option
-          data-img-src="./img_styles/scream.jpg"
-          value="scream"
-          data-img-class="imgSelector"
-        ></option>
-        <option
-          data-img-src="./img_styles/escher_sphere.jpg"
-          value="sphere"
-          data-img-class="imgSelector"
-          >Cute Kitten 3</option
-        >
-      </select>
+      <h1>Transfert de style embarqué</h1>
+      <div class="row">
+        <div class="col-5 styleCol">
+          <h2>Choix du style</h2>
+          <p>
+            Veuillez sélectionner le tableau correspondant au style que vous
+            souhaitez.
+          </p>
+          <div class="styleSelect">
+            <select class="image-picker" id="chosenStyle">
+              <option
+                data-img-src="./images/img_styles/udnie.jpg"
+                value="udnie"
+                data-img-class="imgSelector"
+              ></option>
+              <option
+                data-img-src="./images/img_styles/scream.jpg"
+                value="scream"
+                data-img-class="imgSelector"
+              ></option>
+              <option
+                data-img-src="./images/img_styles/escher_sphere.jpg"
+                value="sphere"
+                data-img-class="imgSelector"
+              ></option>
+              <option
+                data-img-src="https://via.placeholder.com/125"
+                value="null1"
+                data-img-class="imgSelector"
+              ></option>
+              <option
+                data-img-src="https://via.placeholder.com/125"
+                value="null2"
+                data-img-class="imgSelector"
+              ></option>
+              <option
+                data-img-src="https://via.placeholder.com/125"
+                value="null3"
+                data-img-class="imgSelector"
+              ></option>
+              <option
+                data-img-src="https://via.placeholder.com/125"
+                value="null4"
+                data-img-class="imgSelector"
+              ></option>
+              <option
+                data-img-src="https://via.placeholder.com/125"
+                value="null5"
+                data-img-class="imgSelector"
+              ></option>
+            </select>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-6">
+          <div class="row selectImg">
+            <h2>Mon image</h2>
+            <p>
+              Veuillez choisir l'image sur laquelle vous souhaitez appliquer le
+              transfert de style. Utilisez le bouton pour ajouter votre image et
+              obtenir une prévisualisation de l'image choisie. Ensuite cliquez
+              sur "Générer le transfert de style" pour lancer la requête.
+            </p>
+
+            <div class="imgContainer">
+              <img
+                id="imageInput"
+                src="https://via.placeholder.com/400x300"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="inputButtons">
+            <input type="file" onchange="readURL(this);" />
+            <input
+              id="callAPI"
+              type="button"
+              value="Générer le transfert de style"
+              onclick="callPostAPI();"
+            />
+          </div>
+          <div class="row result">
+            <h2>Résutat</h2>
+            <div class="imgContainer">
+              <img
+                id="imageOutput"
+                name="image"
+                src="https://via.placeholder.com/350x150"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <input type="file" onchange="readURL(this);" />
-    <img id="imageInput" src="#" alt="" />
-
-    <input id="callAPI" type="button" value="API" onclick="callPostAPI();" />
-    <img id="imageOutput" name="image" src="#" alt="" />
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="image-picker/image-picker.min.js"></script>
     <script type="text/javascript" src="functions.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
